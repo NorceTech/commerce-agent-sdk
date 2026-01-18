@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "defaultTitle": "Assistant",
+    "openAssistant": "Open assistant",
+    "closeAssistant": "Close assistant",
+    "resetChat": "Reset chat",
+    "maximizeChat": "Maximize chat",
+    "restoreChat": "Restore chat",
+    "close": "Close",
+    "emptyState": "How can I help you today?",
+    "inputPlaceholder": "Type a message...",
+    "errorOccurred": "An error occurred.",
+    "authFailed": "Authentication failed."
+  },
+  "actions": {
+    "tellMeMore": "Tell me more",
+    "addToCart": "Add to cart",
+    "retry": "Retry"
+  },
+  "messages": {
+    "tellMeMoreAboutOption": "Tell me more about option {{number}}",
+    "addOptionToCart": "Add option {{number}} to cart",
+    "option": "Option {{number}}"
+  },
+  "cart": {
+    "item": "item",
+    "item_plural": "items",
+    "subtotal": "Subtotal:",
+    "total": "Total:"
+  },
+  "comparison": {
+    "product": "Product {{number}}"
+  },
+  "error": {
+    "codePrefix": "Code:"
+  },
+  "availability": {
+    "unknown": "Availability unknown",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
+    "orderable": "Orderable",
+    "availableCount": "{{count}} available",
+    "nextDelivery": "Next delivery {{date}}",
+    "leadTimeDays": "Lead time {{count}} days",
+    "expected": "Expected {{date}}",
+    "incomingCount": "{{count}} incoming",
+    "label": "Availability: {{label}}"
+  }
+}

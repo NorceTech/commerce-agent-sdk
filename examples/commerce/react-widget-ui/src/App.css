@@ -1,0 +1,228 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Demo Page Styles */
+.demo-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.demo-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.demo-header p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+.demo-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.demo-footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #888;
+}
+
+.demo-instructions {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.demo-instructions h2 {
+  margin-top: 0;
+  color: #667eea;
+}
+
+.demo-instructions p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Config Panel Styles */
+.demo-config-panel {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.demo-config-panel h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #667eea;
+  text-align: center;
+}
+
+.demo-instructions-box {
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.demo-instructions-box h3 {
+  margin: 0 0 0.75rem 0;
+  color: #667eea;
+  font-size: 1rem;
+}
+
+.demo-instructions-box ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #aaa;
+  line-height: 1.8;
+}
+
+.demo-instructions-box code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: #667eea;
+}
+
+.demo-config-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.demo-config-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.demo-config-field label {
+  font-weight: 500;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.demo-config-field input {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.demo-config-field input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.demo-config-field input::placeholder {
+  color: #666;
+}
+
+.demo-config-hint {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.demo-config-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.demo-config-save-btn {
+  margin-top: 1rem;
+  padding: 0.875rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.demo-config-save-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.demo-config-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.demo-config-warning {
+  margin: 0.5rem 0 0 0;
+  color: #f59e0b;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .demo-config-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .demo-config-panel {
+    padding: 1.5rem;
+  }
+}
+
+/* Agent Widget Styles */
+.agent-widget {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  min-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agent-widget h2 {
+  margin-top: 0;
+  color: #646cff;
+}
+
+@media (max-width: 768px) {
+  .agent-widget {
+    min-width: 100%;
+  }
+  
+  .demo-header h1 {
+    font-size: 2em;
+  }
+}
+

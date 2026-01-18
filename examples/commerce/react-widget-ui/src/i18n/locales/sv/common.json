@@ -1,0 +1,49 @@
+{
+  "widget": {
+    "defaultTitle": "Assistent",
+    "openAssistant": "Öppna assistent",
+    "closeAssistant": "Stäng assistent",
+    "resetChat": "Återställ chatt",
+    "maximizeChat": "Maximera chatt",
+    "restoreChat": "Återställ chatt",
+    "close": "Stäng",
+    "emptyState": "Hur kan jag hjälpa dig idag?",
+    "inputPlaceholder": "Skriv ett meddelande...",
+    "errorOccurred": "Ett fel uppstod.",
+    "authFailed": "Autentisering misslyckades."
+  },
+  "actions": {
+    "tellMeMore": "Berätta mer",
+    "addToCart": "Lägg i varukorgen",
+    "retry": "Försök igen"
+  },
+  "messages": {
+    "tellMeMoreAboutOption": "Berätta mer om alternativ {{number}}",
+    "addOptionToCart": "Lägg alternativ {{number}} i varukorgen",
+    "option": "Alternativ {{number}}"
+  },
+  "cart": {
+    "item": "artikel",
+    "item_plural": "artiklar",
+    "subtotal": "Delsumma:",
+    "total": "Totalt:"
+  },
+  "comparison": {
+    "product": "Produkt {{number}}"
+  },
+  "error": {
+    "codePrefix": "Kod:"
+  },
+  "availability": {
+    "unknown": "Tillgänglighet okänd",
+    "inStock": "I lager",
+    "outOfStock": "Slut i lager",
+    "orderable": "Beställningsbar",
+    "availableCount": "{{count}} tillgängliga",
+    "nextDelivery": "Nästa leverans {{date}}",
+    "leadTimeDays": "Ledtid {{count}} dagar",
+    "expected": "Förväntad {{date}}",
+    "incomingCount": "{{count}} inkommande",
+    "label": "Tillgänglighet: {{label}}"
+  }
+}
