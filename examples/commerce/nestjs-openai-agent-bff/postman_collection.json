@@ -1,0 +1,295 @@
+{
+  "info": {
+    "name": "NC Commerce Agent POC",
+    "description": "API collection for testing the Norce Commerce Agent",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/v1/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["v1", "health"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Simple Auth Token - Get JWT (Partner Demos Only)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"applicationId\": \"1234\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/v1/auth/simple/token",
+              "host": ["{{baseUrl}}"],
+              "path": ["v1", "auth", "simple", "token"]
+            },
+            "description": "Issues a short-lived JWT for widget authentication during partner demos. Requires SIMPLE_AUTH_ENABLED=1 environment variable. The applicationId must be in the ALLOWED_APPLICATION_IDS allowlist (or allowlist empty for permissive mode). Returns: token (JWT), expiresInSeconds (default 600), sid (session UUID for rate limiting). JWT claims: iss (norce-agent-bff), aud (norce-agent-widget), sid, applicationId, iat, exp, scope ([chat])."
+          },
+          "response": []
+        },
+        {
+          "name": "Chat - New Session",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"applicationId\": \"1234\",\n  \"sessionId\": \"unique-session-id\",\n  \"message\": \"Hello, can you help me find products?\",\n  \"context\": {\n    \"cultureCode\": \"sv-SE\",\n    \"currencyCode\": \"SEK\",\n    \"priceListIds\": [1],\n    \"salesAreaId\": 10\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/chat",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "chat"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chat - Continue Session",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"applicationId\": \"1234\",\n  \"sessionId\": \"your-session-id-here\",\n  \"message\": \"Tell me more about the first product\",\n  \"context\": {\n    \"cultureCode\": \"sv-SE\",\n    \"currencyCode\": \"SEK\",\n    \"priceListIds\": [1],\n    \"salesAreaId\": 10\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/chat",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "chat"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Chat Stream - New Session (SSE)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"applicationId\": \"1234\",\n  \"sessionId\": \"stream-session-001\",\n  \"message\": \"Show me black sneakers\",\n  \"context\": {\n    \"cultureCode\": \"sv-SE\",\n    \"currencyCode\": \"SEK\",\n    \"priceListIds\": [1],\n    \"salesAreaId\": 10\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/chat/stream",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "chat", "stream"]
+        },
+        "description": "SSE streaming endpoint that provides real-time visibility into tool calls and partial assistant text. Response is text/event-stream with events: status, tool_start, tool_end, delta, final, error."
+      },
+      "response": []
+    },
+    {
+      "name": "Chat Stream - Continue Session (SSE)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"applicationId\": \"1234\",\n  \"sessionId\": \"stream-session-001\",\n  \"message\": \"Tell me more about the first one\",\n  \"context\": {\n    \"cultureCode\": \"sv-SE\",\n    \"currencyCode\": \"SEK\",\n    \"priceListIds\": [1],\n    \"salesAreaId\": 10\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/chat/stream",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "chat", "stream"]
+        },
+        "description": "Continue a streaming conversation using the same session ID. The agent remembers previous context."
+      },
+      "response": []
+    },
+    {
+      "name": "Chat Stream - Debug Mode (SSE)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"applicationId\": \"1234\",\n  \"sessionId\": \"stream-debug-001\",\n  \"message\": \"Find me a dining table\",\n  \"context\": {\n    \"cultureCode\": \"sv-SE\",\n    \"currencyCode\": \"SEK\",\n    \"priceListIds\": [1],\n    \"salesAreaId\": 10\n  }\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/chat/stream?debug=1",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "chat", "stream"],
+          "query": [
+            {
+              "key": "debug",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "SSE streaming with debug mode enabled. The final event includes debug.toolTrace with detailed tool execution information."
+      },
+      "response": []
+    },
+    {
+      "name": "Debug - List Runs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/v1/debug/runs?limit=50",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "debug", "runs"],
+          "query": [
+            {
+              "key": "limit",
+              "value": "50",
+              "description": "Maximum number of runs to return (default: 50)"
+            },
+            {
+              "key": "applicatinoId",
+              "value": "1234",
+              "disabled": true,
+              "description": "Filter by applicationId"
+            },
+            {
+              "key": "sessionId",
+              "value": "your-session-id",
+              "disabled": true,
+              "description": "Filter by session ID"
+            }
+          ]
+        },
+        "description": "List stored run summaries. Requires DEBUG_RUNS_ENABLED=1 environment variable. Returns runs in reverse chronological order with: runId, createdAt, applicationId, sessionId, status, durationMs, toolCalls, textSnippet."
+      },
+      "response": []
+    },
+    {
+      "name": "Debug - Get Run Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/v1/debug/runs/:runId",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "debug", "runs", ":runId"],
+          "variable": [
+            {
+              "key": "runId",
+              "value": "your-run-id-here",
+              "description": "The UUID of the run to retrieve (get this from the List Runs endpoint)"
+            }
+          ]
+        },
+        "description": "Get full details of a specific run including: request info, result, toolTrace (sanitized tool calls with timing), openaiTrace (model info, rounds, tokens), and any errors. Requires DEBUG_RUNS_ENABLED=1."
+      },
+      "response": []
+    },
+    {
+      "name": "Debug - Replay Run",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/debug/replay/:runId",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "debug", "replay", ":runId"],
+          "variable": [
+            {
+              "key": "runId",
+              "value": "your-run-id-here",
+              "description": "The UUID of the run to replay (get this from the List Runs endpoint)"
+            }
+          ]
+        },
+        "description": "Replay a stored run by re-executing the same inputs through the chat handler. Creates a NEW run with a new runId. The output may differ slightly from the original. Requires DEBUG_RUNS_ENABLED=1."
+      },
+      "response": []
+    },
+    {
+      "name": "Debug - Replay Run with Overrides",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"message\": \"Show me red sneakers instead\",\n  \"context\": {\n    \"cultureCode\": \"en-US\",\n    \"currencyCode\": \"USD\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/v1/debug/replay/:runId",
+          "host": ["{{baseUrl}}"],
+          "path": ["v1", "debug", "replay", ":runId"],
+          "variable": [
+            {
+              "key": "runId",
+              "value": "your-run-id-here",
+              "description": "The UUID of the run to replay"
+            }
+          ]
+        },
+        "description": "Replay a run with optional overrides. You can override the message and/or context to experiment with different inputs while keeping the same tenant/sessionId. Useful for debugging and testing variations."
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}

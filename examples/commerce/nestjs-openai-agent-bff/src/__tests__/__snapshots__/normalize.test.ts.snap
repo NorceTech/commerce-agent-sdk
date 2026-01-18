@@ -1,0 +1,144 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`normalize > normalizeProductGetResultToCard > should match snapshot for stability 1`] = `
+{
+  "attributes": {
+    "brand": "SportBrand",
+    "category": "footwear",
+    "color": "blue",
+    "material": "synthetic",
+    "size": "42",
+  },
+  "currency": "SEK",
+  "imageUrl": "/images/products/12345/main.jpg",
+  "price": "99.99",
+  "productId": "12345",
+  "subtitle": "Comfortable running shoes for everyday use with advanced cushioning technology",
+  "title": "Blue Running Shoes",
+}
+`;
+
+exports[`normalize > normalizeProductSearchResultToCards > should match snapshot for stability 1`] = `
+[
+  {
+    "attributes": {
+      "brand": "SportBrand",
+      "color": "blue",
+      "size": "42",
+    },
+    "availability": {
+      "incomingValue": undefined,
+      "leadtimeDayCount": undefined,
+      "nextDeliveryDate": undefined,
+      "onHandValue": undefined,
+      "status": "unknown",
+    },
+    "currency": "SEK",
+    "imageUrl": "/images/products/12345/main.jpg",
+    "price": "99.99",
+    "productId": "12345",
+    "subtitle": "Comfortable running shoes for everyday use",
+    "title": "Blue Running Shoes",
+  },
+  {
+    "attributes": {
+      "brand": "SportBrand",
+      "color": "red",
+      "size": "43",
+    },
+    "availability": {
+      "incomingValue": undefined,
+      "leadtimeDayCount": undefined,
+      "nextDeliveryDate": undefined,
+      "onHandValue": undefined,
+      "status": "unknown",
+    },
+    "currency": "SEK",
+    "imageUrl": "/images/products/12346/main.jpg",
+    "price": "89.99",
+    "productId": "12346",
+    "subtitle": "Lightweight running shoes",
+    "title": "Red Running Shoes",
+  },
+  {
+    "attributes": {
+      "brand": "FitGear",
+      "color": "black",
+      "size": "41",
+    },
+    "availability": {
+      "incomingValue": undefined,
+      "leadtimeDayCount": undefined,
+      "nextDeliveryDate": undefined,
+      "onHandValue": undefined,
+      "status": "unknown",
+    },
+    "currency": "SEK",
+    "imageUrl": "/images/products/12347/main.jpg",
+    "price": "79.99",
+    "productId": "12347",
+    "subtitle": "Durable training shoes",
+    "title": "Black Training Shoes",
+  },
+  {
+    "attributes": {
+      "brand": "UrbanStyle",
+      "color": "white",
+      "size": "44",
+    },
+    "availability": {
+      "incomingValue": undefined,
+      "leadtimeDayCount": undefined,
+      "nextDeliveryDate": undefined,
+      "onHandValue": undefined,
+      "status": "unknown",
+    },
+    "currency": "SEK",
+    "imageUrl": "/images/products/12348/main.jpg",
+    "price": "69.99",
+    "productId": "12348",
+    "subtitle": "Stylish casual sneakers",
+    "title": "White Casual Sneakers",
+  },
+  {
+    "attributes": {
+      "brand": "OutdoorPro",
+      "color": "green",
+      "size": "42",
+    },
+    "availability": {
+      "incomingValue": undefined,
+      "leadtimeDayCount": undefined,
+      "nextDeliveryDate": undefined,
+      "onHandValue": undefined,
+      "status": "unknown",
+    },
+    "currency": "SEK",
+    "imageUrl": "/images/products/12349/main.jpg",
+    "price": "149.99",
+    "productId": "12349",
+    "subtitle": "Waterproof hiking boots",
+    "title": "Green Hiking Boots",
+  },
+  {
+    "attributes": {
+      "brand": "CourtMaster",
+      "color": "yellow",
+      "size": "43",
+    },
+    "availability": {
+      "incomingValue": undefined,
+      "leadtimeDayCount": undefined,
+      "nextDeliveryDate": undefined,
+      "onHandValue": undefined,
+      "status": "unknown",
+    },
+    "currency": "SEK",
+    "imageUrl": "/images/products/12350/main.jpg",
+    "price": "119.99",
+    "productId": "12350",
+    "subtitle": "Professional tennis shoes",
+    "title": "Yellow Tennis Shoes",
+  },
+]
+`;

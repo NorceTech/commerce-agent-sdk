@@ -1,0 +1,29 @@
+{
+  "confirm": {
+    "add_to_cart": {
+      "prompt": "I can add {quantity} x item {identifier} to your cart. Would you like me to proceed?",
+      "prompt_generic": "I can add an item to your cart. Would you like me to proceed?"
+    },
+    "set_item_quantity": {
+      "prompt": "I can set the quantity of product {productId} to {quantity} in your cart. Would you like me to proceed?",
+      "prompt_generic": "I can update the quantity of an item in your cart. Would you like me to proceed?"
+    },
+    "remove_item": {
+      "prompt": "I can remove product {productId} from your cart. Would you like me to proceed?",
+      "prompt_generic": "I can remove an item from your cart. Would you like me to proceed?"
+    },
+    "generic": {
+      "prompt": "I need your confirmation to proceed with this cart action. Would you like me to proceed?"
+    },
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "yes_value": "yes",
+      "no_value": "no"
+    },
+    "cancelled": "Okay, I've cancelled the action. Is there anything else I can help you with?",
+    "already_completed": "This action has already been completed. Is there anything else I can help you with?",
+    "already_cancelled": "This action has already been cancelled. Is there anything else I can help you with?",
+    "completed": "Done! I've completed the action."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"items\":[{\"id\":\"ABC123\",\"title\":\"Wireless Headphones\",\"description\":\"Premium wireless headphones with noise cancellation\",\"priceInfo\":{\"amount\":199.99,\"currency\":\"SEK\"},\"primaryImage\":\"/images/products/abc123/thumb.jpg\",\"attributes\":{\"color\":\"black\",\"brand\":\"AudioPro\"}},{\"partNo\":\"XYZ789\",\"productName\":\"Bluetooth Speaker\",\"description\":\"Portable Bluetooth speaker\",\"images\":[\"/images/products/xyz789/1.jpg\",\"/images/products/xyz789/2.jpg\"],\"attributes\":{\"color\":\"silver\",\"material\":\"aluminum\"}}],\"totalCount\":2}"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "confirm": {
+    "add_to_cart": {
+      "prompt": "Jag kan lägga till {quantity} x artikel {identifier} i din varukorg. Vill du att jag fortsätter?",
+      "prompt_generic": "Jag kan lägga till en artikel i din varukorg. Vill du att jag fortsätter?"
+    },
+    "set_item_quantity": {
+      "prompt": "Jag kan ändra antalet av produkt {productId} till {quantity} i din varukorg. Vill du att jag fortsätter?",
+      "prompt_generic": "Jag kan uppdatera antalet av en artikel i din varukorg. Vill du att jag fortsätter?"
+    },
+    "remove_item": {
+      "prompt": "Jag kan ta bort produkt {productId} från din varukorg. Vill du att jag fortsätter?",
+      "prompt_generic": "Jag kan ta bort en artikel från din varukorg. Vill du att jag fortsätter?"
+    },
+    "generic": {
+      "prompt": "Jag behöver din bekräftelse för att fortsätta med denna varukorgåtgärd. Vill du att jag fortsätter?"
+    },
+    "options": {
+      "yes": "Ja",
+      "no": "Nej",
+      "yes_value": "ja",
+      "no_value": "nej"
+    },
+    "cancelled": "Okej, jag har avbrutit åtgärden. Finns det något annat jag kan hjälpa dig med?",
+    "already_completed": "Denna åtgärd har redan slutförts. Finns det något annat jag kan hjälpa dig med?",
+    "already_cancelled": "Denna åtgärd har redan avbrutits. Finns det något annat jag kan hjälpa dig med?",
+    "completed": "Klart! Jag har slutfört åtgärden."
+  }
+}

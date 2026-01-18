@@ -1,0 +1,8 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"productId\":\"12345\",\"name\":\"Blue Running Shoes\",\"description\":\"Comfortable running shoes for everyday use with advanced cushioning technology\",\"price\":99.99,\"currency\":\"SEK\",\"imageUrl\":\"/images/products/12345/main.jpg\",\"color\":\"blue\",\"size\":\"42\",\"brand\":\"SportBrand\",\"material\":\"synthetic\",\"category\":\"footwear\"}"
+    }
+  ]
+}
