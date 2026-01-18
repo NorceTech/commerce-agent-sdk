@@ -1,0 +1,55 @@
+{
+  "stage": {
+    "start": "Starting...",
+    "thinking": "Thinking...",
+    "searching": "Searching the catalog...",
+    "refining": "Refining the results...",
+    "details": "Checking details and availability...",
+    "cart": "Updating your cart...",
+    "comparing": "Preparing a comparison...",
+    "finalizing": "Preparing the reply..."
+  },
+  "tool": {
+    "displayName": {
+      "product_search": "Search products",
+      "product_get": "Get product details",
+      "cart_get": "Get cart",
+      "cart_add_item": "Add to cart",
+      "cart_set_item_quantity": "Update quantity",
+      "cart_remove_item": "Remove item"
+    },
+    "start": {
+      "product_search": "Searching the catalog...",
+      "product_get": "Checking details and availability...",
+      "cart_get": "Checking your cart...",
+      "cart_add_item": "Adding to your cart...",
+      "cart_set_item_quantity": "Updating your cart...",
+      "cart_remove_item": "Updating your cart...",
+      "default": "Working..."
+    },
+    "end": {
+      "ok": {
+        "product_search": "Found some options.",
+        "product_get": "Details checked.",
+        "cart_get": "Cart updated.",
+        "cart_add_item": "Cart updated.",
+        "cart_set_item_quantity": "Cart updated.",
+        "cart_remove_item": "Cart updated.",
+        "default": "Done."
+      },
+      "fail": {
+        "product_search": "Search didn't work. Retrying...",
+        "product_get": "Couldn't load details. Retrying...",
+        "cart_get": "Couldn't update cart. Retrying...",
+        "cart_add_item": "Couldn't update cart. Retrying...",
+        "cart_set_item_quantity": "Couldn't update cart. Retrying...",
+        "cart_remove_item": "Couldn't update cart. Retrying...",
+        "default": "Something went wrong. Retrying..."
+      }
+    }
+  },
+  "stream": {
+    "round": "Working on step {round}...",
+    "round_first": "Thinking..."
+  }
+}

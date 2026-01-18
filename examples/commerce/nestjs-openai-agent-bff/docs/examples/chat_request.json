@@ -1,0 +1,13 @@
+{
+  "applicationId": "1234",
+  "sessionId": "unique-session-id",
+  "message": "Show me black sneakers",
+  "context": {
+    "cultureCode": "sv-SE",
+    "currencyCode": "SEK",
+    "priceListIds": [1],
+    "salesAreaId": 10,
+    "customerId": 12345,
+    "companyId": 123
+  }
+}

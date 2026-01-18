@@ -1,0 +1,55 @@
+{
+  "stage": {
+    "start": "Startar...",
+    "thinking": "Tänker...",
+    "searching": "Söker i katalogen...",
+    "refining": "Förbättrar resultaten...",
+    "details": "Kontrollerar detaljer och tillgänglighet...",
+    "cart": "Uppdaterar din varukorg...",
+    "comparing": "Förbereder en jämförelse...",
+    "finalizing": "Förbereder svaret..."
+  },
+  "tool": {
+    "displayName": {
+      "product_search": "Söker produkter",
+      "product_get": "Hämta produktdetaljer",
+      "cart_get": "Hämta varukorg",
+      "cart_add_item": "Lägg till i varukorgen",
+      "cart_set_item_quantity": "Uppdatera antal",
+      "cart_remove_item": "Ta bort artikel"
+    },
+    "start": {
+      "product_search": "Söker i katalogen...",
+      "product_get": "Kontrollerar detaljer och tillgänglighet...",
+      "cart_get": "Kontrollerar din varukorg...",
+      "cart_add_item": "Lägger till i din varukorg...",
+      "cart_set_item_quantity": "Uppdaterar din varukorg...",
+      "cart_remove_item": "Uppdaterar din varukorg...",
+      "default": "Arbetar..."
+    },
+    "end": {
+      "ok": {
+        "product_search": "Hittade några alternativ.",
+        "product_get": "Detaljer kontrollerade.",
+        "cart_get": "Varukorg uppdaterad.",
+        "cart_add_item": "Varukorg uppdaterad.",
+        "cart_set_item_quantity": "Varukorg uppdaterad.",
+        "cart_remove_item": "Varukorg uppdaterad.",
+        "default": "Klart."
+      },
+      "fail": {
+        "product_search": "Sökningen fungerade inte. Försöker igen...",
+        "product_get": "Kunde inte ladda detaljer. Försöker igen...",
+        "cart_get": "Kunde inte uppdatera varukorgen. Försöker igen...",
+        "cart_add_item": "Kunde inte uppdatera varukorgen. Försöker igen...",
+        "cart_set_item_quantity": "Kunde inte uppdatera varukorgen. Försöker igen...",
+        "cart_remove_item": "Kunde inte uppdatera varukorgen. Försöker igen...",
+        "default": "Något gick fel. Försöker igen..."
+      }
+    }
+  },
+  "stream": {
+    "round": "Arbetar vidare (steg {round})...",
+    "round_first": "Tänker..."
+  }
+}
