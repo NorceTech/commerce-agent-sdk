@@ -1,6 +1,6 @@
-# -nc-commerce-agent-poc
+# Norce Commerce Agent SDK
 
-Norce Commerce Agent POC - A Node.js 20 + TypeScript application with Fastify, OpenAI, and Norce API integration.
+Norce Commerce Agent SDK - A Node.js 20 + TypeScript application with Fastify, OpenAI, and Norce API integration.
 
 ## Features
 
@@ -135,4 +135,4 @@ The application uses:
 
 ## License
 
-ISC
+MIT
